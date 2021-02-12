@@ -5,6 +5,8 @@
  */
 package Prueba01;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author NOVAK
@@ -14,6 +16,10 @@ public class InterfazPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form InterfazPrincipal
      */
+    public static ArrayList<Libro> ListaLibros = new ArrayList<>();
+    public static ArrayList<Cliente> ListaClientes = new ArrayList<>();
+    public static ArrayList<Empleado> ListaEmpleados = new ArrayList<>();
+    
     public InterfazPrincipal() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -48,6 +54,11 @@ public class InterfazPrincipal extends javax.swing.JFrame {
         });
 
         StockButton.setText("Ver stock");
+        StockButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StockButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -84,6 +95,10 @@ public class InterfazPrincipal extends javax.swing.JFrame {
         b1.setLocationRelativeTo(null);
         b1.setVisible(true);
     }//GEN-LAST:event_BoletaButtonActionPerformed
+
+    private void StockButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StockButtonActionPerformed
+
+    }//GEN-LAST:event_StockButtonActionPerformed
 
     /**
      * @param args the command line arguments
